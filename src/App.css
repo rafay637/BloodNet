@@ -1,0 +1,15 @@
+.handling {
+  min-height: 100dvh;
+  align-items: center;
+  justify-content: center;
+}
+
+.subhandling{
+  margin: auto;
+  margin-top: 10rem;
+  width: 40%;
+}
+
+.link{
+  text-decoration: none;
+}
