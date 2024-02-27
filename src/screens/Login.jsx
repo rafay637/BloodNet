@@ -49,8 +49,9 @@ export const Login = () => {
         }
         try {
             await signInWithEmailAndPassword(auth, emailInput, passwordInput);
-            setSuccess("Login Successful");
-            navigate("/home");
+            setSuccess("Login Successfully");
+            localStorage.setItem("isLoggedIn", true)
+            navigate("/");
         } catch (error) {
             console.error("Error signing in:", error.message);
             setFormValid(error.message);

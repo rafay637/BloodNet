@@ -61,7 +61,7 @@ export const SignUp = () => {
             const user = userCredential.user;
             console.log("User signed up:", user);
             setSuccess("Form submitted successfully");
-            navigate("/home");
+            // navigate("/home");
         } catch (error) {
             console.error("Error signing up:", error.message);
             setFormValid(error.message);
