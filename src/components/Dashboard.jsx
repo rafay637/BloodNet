@@ -20,6 +20,9 @@ import HouseIcon from '@mui/icons-material/House';
 import LocalHotelIcon from '@mui/icons-material/LocalHotel';
 import PersonIcon from '@mui/icons-material/Person';
 import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
+import CachedIcon from '@mui/icons-material/Cached';
+import SaveAsIcon from '@mui/icons-material/SaveAs';
+import HistoryIcon from '@mui/icons-material/History';
 import { useNavigate } from 'react-router-dom';
 
 const drawerWidth = 240;
@@ -195,7 +198,7 @@ export const Dashboard = () => {
                         </ListItemButton>
                     </ListItem>
 
-                    <ListItem disablePadding sx={{ display: 'block' }} onClick={() => { navigate("/my-donation") }}>
+                    <ListItem disablePadding sx={{ display: 'block' }} onClick={() => { navigate("/donation") }}>
                         <ListItemButton
                             sx={{
                                 minHeight: 48,
@@ -212,13 +215,11 @@ export const Dashboard = () => {
                             >
                                 <VolunteerActivismIcon />
                             </ListItemIcon>
-                            <ListItemText primary="My Donation" sx={{ opacity: open ? 1 : 0 }} />
+                            <ListItemText primary="Donation" sx={{ opacity: open ? 1 : 0 }} />
                         </ListItemButton>
                     </ListItem>
-                </List>
-                {/* <Divider /> */}
-                {/* <List>
-                    <ListItem key={text} disablePadding sx={{ display: 'block' }}>
+
+                    <ListItem disablePadding sx={{ display: 'block' }} onClick={() => { navigate("/request") }}>
                         <ListItemButton
                             sx={{
                                 minHeight: 48,
@@ -233,43 +234,56 @@ export const Dashboard = () => {
                                     justifyContent: 'center',
                                 }}
                             >
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                                <CachedIcon />
                             </ListItemIcon>
-                            <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
+                            <ListItemText primary="Blood Requests" sx={{ opacity: open ? 1 : 0 }} />
                         </ListItemButton>
                     </ListItem>
-                </List> */}
+
+                    <ListItem disablePadding sx={{ display: 'block' }} onClick={() => { navigate("/register") }}>
+                        <ListItemButton
+                            sx={{
+                                minHeight: 48,
+                                justifyContent: open ? 'initial' : 'center',
+                                px: 2.5,
+                            }}
+                        >
+                            <ListItemIcon
+                                sx={{
+                                    minWidth: 0,
+                                    mr: open ? 3 : 'auto',
+                                    justifyContent: 'center',
+                                }}
+                            >
+                                <SaveAsIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Registration" sx={{ opacity: open ? 1 : 0 }} />
+                        </ListItemButton>
+                    </ListItem>
+
+                    <ListItem disablePadding sx={{ display: 'block' }} onClick={() => { navigate("/history") }}>
+                        <ListItemButton
+                            sx={{
+                                minHeight: 48,
+                                justifyContent: open ? 'initial' : 'center',
+                                px: 2.5,
+                            }}
+                        >
+                            <ListItemIcon
+                                sx={{
+                                    minWidth: 0,
+                                    mr: open ? 3 : 'auto',
+                                    justifyContent: 'center',
+                                }}
+                            >
+                                <HistoryIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Donation History" sx={{ opacity: open ? 1 : 0 }} />
+                        </ListItemButton>
+                    </ListItem>
+
+                </List>
             </Drawer>
-            {/* <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-                <DrawerHeader />
-                <Typography paragraph>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
-                    enim praesent elementum facilisis leo vel. Risus at ultrices mi tempus
-                    imperdiet. Semper risus in hendrerit gravida rutrum quisque non tellus.
-                    Convallis convallis tellus id interdum velit laoreet id donec ultrices.
-                    Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-                    adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra
-                    nibh cras. Metus vulputate eu scelerisque felis imperdiet proin fermentum
-                    leo. Mauris commodo quis imperdiet massa tincidunt. Cras tincidunt lobortis
-                    feugiat vivamus at augue. At augue eget arcu dictum varius duis at
-                    consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa
-                    sapien faucibus et molestie ac.
-                </Typography>
-                <Typography paragraph>
-                    Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper
-                    eget nulla facilisi etiam dignissim diam. Pulvinar elementum integer enim
-                    neque volutpat ac tincidunt. Ornare suspendisse sed nisi lacus sed viverra
-                    tellus. Purus sit amet volutpat consequat mauris. Elementum eu facilisis
-                    sed odio morbi. Euismod lacinia at quis risus sed vulputate odio. Morbi
-                    tincidunt ornare massa eget egestas purus viverra accumsan in. In hendrerit
-                    gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem
-                    et tortor. Habitant morbi tristique senectus et. Adipiscing elit duis
-                    tristique sollicitudin nibh sit. Ornare aenean euismod elementum nisi quis
-                    eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
-                    posuere sollicitudin aliquam ultrices sagittis orci a.
-                </Typography>
-            </Box> */}
         </Box>
     );
 }

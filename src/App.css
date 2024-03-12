@@ -25,31 +25,31 @@
   margin: 5rem !important;
 } */
 
-.card{
+.card {
   min-height: 15dvh;
   align-items: center;
   justify-content: center;
 }
 
-.col-md-3{
+.col-md-3 {
   width: 16rem !important;
 }
 
-.drop{
+.drop {
   color: #b82d2d;
   font-size: 2.5rem !important;
 }
 
-.drop1{
+.drop1 {
   color: rgb(50, 100, 151);
   font-size: 2rem !important;
 }
 
-.type{
-  padding: 8px;
+.type {
+  padding: 4px;
 }
 
-.divider{
+.divider {
   border: 0.2px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -74,3 +74,90 @@
   }
 }
 
+table {
+  margin: 0.75rem !important;
+}
+
+th {
+  padding: 1rem;
+  background-color: rgb(28, 170, 170);
+}
+
+td {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.custom-table th {
+  background-color: rgb(28, 170, 170);
+}
+
+/* .custom-table th {
+  background-color: #f2f2f2;
+} */
+
+.table-responsive {
+  overflow-x: auto;
+  margin: 2.5rem;
+}
+
+.huya-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.huya-table th,
+.huya-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.huya-table th {
+  background-color: rgb(28, 170, 170);
+}
+
+/* .custom-table th {
+  background-color: #f2f2f2;
+} */
+
+.io-responsive {
+  overflow-x: auto;
+  margin: 0.4rem;
+}
+.lala-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.lala-table th,
+.lala-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.lala-table th {
+  background-color: rgb(28, 170, 170);
+}
+
+/* .custom-table th {
+  background-color: #f2f2f2;
+} */
+
+.iso-responsive {
+  overflow-x: auto;
+  margin: 0.4rem;
+  width: 55rem;
+}

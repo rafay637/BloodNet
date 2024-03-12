@@ -20,8 +20,6 @@ export const SignUp = () => {
     const [formValid, setFormValid] = useState(false);
     const [success, setSuccess] = useState("");
 
-    const navigate = useNavigate();
-
     const handleClickShowPassword = () => setShowPassword((show) => !show);
     const handleMouseDownPassword = (event) => event.preventDefault();
 
@@ -60,8 +58,7 @@ export const SignUp = () => {
             const userCredential = await createUserWithEmailAndPassword(auth, emailInput, passwordInput);
             const user = userCredential.user;
             console.log("User signed up:", user);
-            setSuccess("Form submitted successfully");
-            // navigate("/home");
+            setSuccess("Now Login & Go To DASHBOARD");
         } catch (error) {
             console.error("Error signing up:", error.message);
             setFormValid(error.message);

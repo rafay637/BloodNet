@@ -4,7 +4,7 @@ import { Dashboard } from '../components/Dashboard';
 import { Box, Button } from '@mui/material';
 import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
 
-export const Patient = () => {
+export const Donation = () => {
 
     const [editableRow, setEditableRow] = useState(null);
 
@@ -27,10 +27,10 @@ export const Patient = () => {
                 <Dashboard />
                 <div className="main" >
                     <div className="container">
-                        <h1 className='text-center'>PATIENT DETAILS</h1>
+                        <h1 className='text-center'>BLOOD DONATION DETAILS</h1>
 
-                        <div className="table-responsive">
-                            <table className="custom-table">
+                        <div className="io-responsive">
+                            <table className="huya-table">
                                 <thead>
                                     <tr>
                                         <th>Name</th>
@@ -60,7 +60,7 @@ export const Patient = () => {
                                                     </div>
                                                 ) : (
                                                     <div className='px-3'>
-                                                        <Button variant='contained' sx={{ backgroundColor: "dodgerblue", margin: "5px", color: "white" }} onClick={() => handleEditClick(index)}>Registered</Button>
+                                                        <Button variant='contained' sx={{ backgroundColor: "red", margin: "5px", color: "white" }} onClick={() => handleEditClick(index)}>0 Unit added to stock</Button>
                                                         {/* <Button variant='contained' sx={{ backgroundColor: "red", color: "white" }} onClick={() => handleDeleteClick(index)}>Delete</Button> */}
                                                     </div>
                                                 )}
@@ -86,7 +86,7 @@ export const Patient = () => {
                                                     </div>
                                                 ) : (
                                                     <div className='px-3'>
-                                                        <Button variant='contained' sx={{ backgroundColor: "dodgerblue", margin: "5px", color: "white" }} onClick={() => handleEditClick(index)}>Registered</Button>
+                                                        <Button variant='contained' sx={{ backgroundColor: "goldenrod", margin: "5px", color: "white" }} onClick={() => handleEditClick(index)}>4 Unit added to stock</Button>
                                                         {/* <Button variant='contained' sx={{ backgroundColor: "red", color: "white" }} onClick={() => handleDeleteClick(index)}>Delete</Button> */}
                                                     </div>
                                                 )}
@@ -94,6 +94,33 @@ export const Patient = () => {
                                         </tr>
                                     ))}
                                 </tbody>
+
+                                <tbody>
+                                    {[{ name: "Sarim", bloodGroup: "AB +", address: "Lahore, Pakistan", email: "patient@mail.com", mobile: "+92 329 0157164" }].map((row, index) => (
+                                        <tr key={index}>
+                                            <td contentEditable={editableRow === index}>{row.name}</td>
+                                            <td><PersonRoundedIcon /></td>
+                                            <td contentEditable={editableRow === index}>{row.bloodGroup}</td>
+                                            <td contentEditable={editableRow === index}>{row.address}</td>
+                                            <td contentEditable={editableRow === index}>{row.email}</td>
+                                            <td contentEditable={editableRow === index}>{row.mobile}</td>
+                                            <td>
+                                                {editableRow === index ? (
+                                                    <div className='px-3'>
+                                                        <Button variant='contained' sx={{ backgroundColor: "green", margin: "5px", color: "white" }} onClick={handleSaveClick}>Save</Button>
+                                                        <Button variant='contained' sx={{ backgroundColor: "red", color: "white" }} onClick={() => setEditableRow(null)}>Cancel</Button>
+                                                    </div>
+                                                ) : (
+                                                    <div className='px-3'>
+                                                        <Button variant='contained' sx={{ backgroundColor: "green", margin: "5px", color: "white" }} onClick={() => handleEditClick(index)}>10 Unit added to stock</Button>
+                                                        {/* <Button variant='contained' sx={{ backgroundColor: "red", color: "white" }} onClick={() => handleDeleteClick(index)}>Delete</Button> */}
+                                                    </div>
+                                                )}
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+
                             </table>
                         </div>
                     </div>
